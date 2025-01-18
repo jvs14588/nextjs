@@ -1,6 +1,11 @@
 // import Image from "next/image";
-
+import type { Metadata } from "next";
 import Hello from "@/app/components/hello";
+
+export const metadata: Metadata = {
+  title: "Hello Next.js 👋",
+  description: "Root Page Metadata",
+};
 
 export default function Home() {
   console.log('Hello World');
