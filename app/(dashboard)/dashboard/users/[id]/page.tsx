@@ -1,8 +1,7 @@
 import React from "react";
-import type { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const { id } = params;
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
 
   return {
     title: "Hello Next.js 👋",
